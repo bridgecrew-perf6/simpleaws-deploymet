@@ -1,8 +1,8 @@
-name: deployment from github to aws
+name: Deployment From Github To AWS
 on:
   push:
     branches:
-      -  master
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,8 +10,8 @@ jobs:
       - name: Checkout Latest Repo
         uses: actions/checkout@master
       
-      - name: Generate Deployment Package
-        run: zip - deploy.zip * -x "**node_modules**"
+      - name: Generate Deployment Package 
+        run: zip -r deploy.zip * -x "**node_modules**"
         
       - name: Get timestamp
         uses: gerred/actions/current-time@master
