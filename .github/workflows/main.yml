@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: simpleaws-deploymet
-          environment_name: Simpleawsdeploymet-env
+          application_name: simpleaws-deploymet2
+          environment_name: Simpleawsdeploymet2-env
           version_label: "laffy-test-server-${{ steps.format-time.outputs.replaced }}"
           region: us-east-1
           deployment_package: deploy.zip
